@@ -18,3 +18,10 @@ class AuthView(Resource):
 
         token = auth_service.generation_token(username, password)
         return token, 201
+
+    def put(self):
+        req_json = request.json
+        token = req_json.get("refresh_token")
+        tokens = auth_service.approve_refresh_token(token)
+
+        return tokens, 201

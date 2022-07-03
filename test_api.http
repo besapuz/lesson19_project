@@ -40,6 +40,7 @@ Accept: application/json
 
 GET http://127.0.0.1:5000/movies/21
 Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ilx1MDQxMlx1MDQzMFx1MDQ0MVx1MDQzOFx1MDQzYlx1MDQzOFx1MDQzOSIsInBhc3N3b3JkIjoiUEBvaG84NzU4IiwiZXhwIjoxNjU5NDY0MDIwfQ.VwkoYD4b1MDhgfz3P0GPaGUgUr6_dU5gbbQxqlEpxV8
 
 ###
 
@@ -59,6 +60,7 @@ Content-Type: application/json
 
 PUT http://127.0.0.1:5000/movies/21
 Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ilx1MDQxMlx1MDQzMFx1MDQ0MVx1MDQzOFx1MDQzYlx1MDQzOFx1MDQzOSIsInBhc3N3b3JkIjoiUEBvaG84NzU4IiwiZXhwIjoxNjU5NDY0MDIwfQ.VwkoYD4b1MDhgfz3P0GPaGUgUr6_dU5gbbQxqlEpxV8
 Content-Type: application/json
 
 {
@@ -92,12 +94,12 @@ Content-Type: application/json
 ###
 
 DELETE http://127.0.0.1:5000/movies/21
-
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ilx1MDQxMlx1MDQzMFx1MDQ0MVx1MDQzOFx1MDQzYlx1MDQzOFx1MDQzOSIsInBhc3N3b3JkIjoiUEBvaG84NzU4IiwiZXhwIjoxNjU5NDY0MDIwfQ.VwkoYD4b1MDhgfz3P0GPaGUgUr6_dU5gbbQxqlEpxV8
 ###
 
 GET http://127.0.0.1:5000/user/
 Accept: application/json
-
+Authorization:
 ###
 
 POST http://127.0.0.1:5000/user/
@@ -105,9 +107,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "username": "Александр",
-  "password": "P@ohoijjL",
-  "role": "admin"
+  "username": "Коля",
+  "password": "P@oho8758",
+  "role": "user"
 }
 
 ###
@@ -122,7 +124,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://127.0.0.1:5000/user/4
+DELETE http://127.0.0.1:5000/user/1
 
 ###
 
@@ -131,8 +133,19 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "username": "Вася",
-  "password": "P@ohoijjL"
+  "username": "Василий",
+  "password": "P@oho8758"
 }
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ilx1MDQxMlx1MDQzMFx1MDQ0MVx1MDQzOFx1MDQzYlx1MDQzOFx1MDQzOSIsInBhc3N3b3JkIjoiUEBvaG84NzU4IiwiZXhwIjoxNjU5NDY0MDIwfQ.VwkoYD4b1MDhgfz3P0GPaGUgUr6_dU5gbbQxqlEpxV8"
+}
+
 
 ###

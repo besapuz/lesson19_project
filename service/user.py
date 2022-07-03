@@ -41,7 +41,7 @@ class UserService:
         return hash_digest
 
     def compare_password(self, password_hash, other_password):
-        decoded_digest = base64.b64decode(password_hash)
+        # decoded_digest = base64.b64decode(password_hash)
         print(other_password)
         hash_digest = base64.b64encode(hashlib.pbkdf2_hmac(
             ALGO,
@@ -50,4 +50,4 @@ class UserService:
             PWD_HASH_ITERATIONS
         )).decode('utf-8')
         print(hash_digest)
-        return hmac.compare_digest(decoded_digest, hash_digest)
+        return hmac.compare_digest(password_hash, hash_digest)
